@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="BaseRecyclerViewAdapterHelper-v1.9.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/model/build/intermediates/exploded-aar/com.github.CymChad/BaseRecyclerViewAdapterHelper/v1.9.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/model/build/intermediates/exploded-aar/com.github.CymChad/BaseRecyclerViewAdapterHelper/v1.9.1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,29 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        /*BaseRecyclerViewAdapterHelper*/
+        maven { url "https://jitpack.io" }
+
+    }
+    /*'com.android.tools.build:gradle:1.5.0 这个是我之前用的编译版本 2016/7/13'*/
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.0'
+        //butterknife 依赖注入框架   recycleList适配器
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        //recycleList适配器
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        //BaseRecyclerViewAdapterHelper  适配器
+        maven { url "https://jitpack.io" }
+        //UltimateRecyclerView
+    }
+}

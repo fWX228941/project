@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="jlog-1.0.5">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.jiongbull/jlog/1.0.5/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.jiongbull/jlog/1.0.5/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jiongbull/jlog/1.0.5/ecb5b0e89e7c45892c3412b5bd05573cf62add18/jlog-1.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

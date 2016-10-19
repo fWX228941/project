@@ -1,0 +1,68 @@
+apply plugin: 'com.android.library'
+//butterknife 依赖注入框架
+//apply plugin: 'com.neenbedankt.android-apt'
+
+
+android {
+    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
+    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion Integer.parseInt(project.ANDROID_BUILD_MIN_SDK_VERSION)
+        targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
+        versionName project.VERSION_NAME
+        versionCode Integer.parseInt(project.VERSION_CODE)
+        // Enabling multidex support.
+        multiDexEnabled true
+    }
+    //添加签名
+    signingConfigs {
+        release {
+            storeFile file("C:/Users/fWX228941/.android/haobanyireleasekey.jks")
+            storePassword "fmfm466@@"
+            keyPassword  "FmFm466@@"
+            keyAlias "HaobanyiReleaseKey"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //添加签名
+            signingConfig signingConfigs.release
+        }
+    }
+    // 解决内存泄露问题
+    dexOptions {
+        incremental = true;
+        preDexLibraries = false
+        javaMaxHeapSize "4g" // 2g should be also OK
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+//     compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.google.code.gson:gson:2.3'
+    compile project(':model')
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    /*日志输出框架，后期自己实现这个简化版本的*/
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta3'
+//    compile files('libs/locSDK_6.23.jar')
+    //添加日志信息
+    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+    /*图片加载框架glide*/
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //使用依赖注入 butterknife 在这里无法使用，只有在app侧才是能够使用的
+//    compile 'com.jakewharton:butterknife:8.0.1'
+//    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    //使用上刷下拉机制  真的是它引起的吗？
+   // compile 'com.canyinghao:canrefresh:1.0.1'
+
+
+}
+
+
