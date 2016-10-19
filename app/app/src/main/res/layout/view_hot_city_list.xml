@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#efeff4">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:text="当前城市"
+        android:id="@+id/id_current_city"
+        android:gravity="center_vertical"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        android:paddingLeft="12dp"/>
+
+    <!--左上角内缩进10个dp，线性布局默认是垂直-->
+    <!--1.标题说明框-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="@drawable/button_city"
+            android:layout_marginLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/nearby_icon_01"
+                android:id="@+id/imageView3"/>
+            <TextView
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="深圳"
+                android:id="@+id/id_item_city_result"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:textColor="#ffffc851"
+                android:paddingRight="17dp"
+                android:paddingTop="16dp"
+                android:paddingLeft="12dp"
+                android:paddingBottom="16dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="正在定位城市...GPS定位"
+            android:drawablePadding="6dp"
+            android:id="@+id/id_item_city_loading"
+            android:gravity="center_vertical"
+            android:textSize="15sp"
+            android:textColor="#ffffc851"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/button_city"
+            android:layout_marginLeft="12dp"
+            />
+
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:text="热门城市"
+        android:gravity="center_vertical"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        android:paddingLeft="12dp"/>
+    <!--2.城市列表-->
+    <!--
+        1）添加了ID才会显示数据
+        2）列数numColumns 要不设置为具体的值，通常为3列，要不设置为auto_fit自适应
+        3）设置两行之间的距离verticalSpacing
+        4) 设置两列之间的边距horizontalSpacing 这两项值统一
+        整体内缩一下 layout  右边因为涉及到sideBar，所以需要除开sideBar的5dp，所以
+        设置为15dp更加妥当
+    =-->
+    <com.android.haobanyi.view.CustomGridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_gridview_hotcity"
+        android:numColumns="4"
+        android:verticalSpacing="7dp"
+        android:horizontalSpacing="7dp"
+        android:layout_marginLeft="12dp"/>
+</LinearLayout>

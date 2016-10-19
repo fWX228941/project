@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ Copyright (C) 2015. Keegan小钢（http://keeganlee.me）
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.android.haobanyi">
+
+    <!-- ===================用户权限=================== -->
+    <!-- 访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--WiFi-->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!--让程序有访问系统开机事件-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!--使用扫描二维码，需要添加使用照相机和闪光灯的功能-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!--设置时区-->
+    <uses-permission android:name="android.permission.SET_TIME_ZONE" />
+    <!--读写sd卡外存-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--接收短信和读取短信。自动获取短信中的验证码-->
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+
+
+
+<!--图标-->
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon"
+        >
+        <!--SDK4.2及之后版本需要在Mainfest.xml设置Accesskey，设置有误会引起定位和地理围栏服务不能正常使用，必须进行Accesskey的正确设置-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="jPg2LRNN08WZ44k52oEK6HLHRfQwxfkk" />       <!--//key:开发者申请的key-->
+        <!--在application标签中声明service组件,每个app拥有自己单独的定位service-->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <!--            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        -->
+        <!--启动屏Logo界面-->
+        <activity
+            android:name=".activity.guid.SplashActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:launchMode="singleTask"
+            android:label="@string/app_name">
+        </activity>
+        <!--功能导航界面-->
+        <activity
+            android:name=".activity.guid.WelcomeGuideActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" />
+
+        <!--登录界面-->
+        <activity
+            android:name=".activity.guid.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:launchMode="singleTask">
+<!--            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+
+        <activity android:name=".activity.guid.register.RegisterActivity01"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:name=".activity.guid.register.RegisterActivity02"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <activity android:name=".activity.guid.register.RegisterActivity03"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <!--重置设置支付密码界面-->
+        <activity android:name=".activity.guid.register.SetPayPwdActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <!--第三方协议-->
+        <activity android:name=".activity.guid.register.ThirdExplainActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        -->
+        <activity
+            android:name=".activity.RadioGroupActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--测试demo-->
+        <activity android:name=".activity.ailpay.PayDemoActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+<!--            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity android:name=".activity.ailpay.H5PayDemoActivity">
+        </activity>
+
+        <!--产品服务列表界面-->
+        <activity
+            android:name=".activity.home.ProductSListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+        <!--搜索界面-->
+        <activity
+            android:name=".activity.home.SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            />
+
+        <!--城市选择界面-->
+        <activity android:name=".activity.home.CitySelecterActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--二维码界面-->
+        <activity android:name=".activity.zxing.CaptureActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--关键字列表界面-->
+        <activity android:name=".activity.searching.KeywordSearchActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+ <!--           <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+
+        </activity>
+
+        <!--商家店铺首页-->
+        <activity android:name=".activity.shopping.store.StorePageActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+<!--            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+
+        </activity>
+
+        <activity android:name=".activity.shopping.product.ShoppingRadioGroupActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+<!--            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+
+        </activity>
+
+        <!--测试界面-->
+        <activity android:name=".test.TextActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+<!--            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+
+        </activity>
+
+
+        <!--确认订单界面-->
+        <activity android:name=".activity.shopping.shopping.ConformOrderActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+<!--            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+
+
+        </activity>
+
+        <activity android:name=".activity.guid.QuickResponseLoginActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <!--第一版简化版先使用-->
+        <activity android:name=".activity.searching.ShopListActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--添加联系人界面-->
+        <activity android:name=".activity.mine.contact.AddContactActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--联系人列表界面-->
+        <activity android:name=".activity.mine.contact.MyContactListAcitivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--我的足迹界面-->
+        <activity android:name=".activity.mine.history.MyFootHistoryActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--平台红包列表-->
+        <activity android:name=".activity.mine.property.AllRedEnvelopeListActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--我的消息界面-->
+        <activity android:name=".activity.mine.message.MyMessageActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan"
+            >
+        </activity>
+
+        <!--我的订单界面-->
+        <activity android:name=".activity.mine.order.MyOrderListActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+
+        <!--账户余额界面-->
+        <activity android:name=".activity.mine.property.AccountBalanceActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--平台红包界面-->
+        <activity android:name=".activity.mine.property.MyRedEnvelopeListActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--不同类型的列表-->
+        <activity android:name=".activity.mine.message.MessageListActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--我的财产界面-->
+        <activity android:name=".activity.mine.property.MyPropertyActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--我的代金券界面-->
+        <activity android:name=".activity.mine.property.VoucherActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--用户积分界面-->
+        <activity android:name=".activity.mine.property.UserPointActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--发票界面-->
+        <activity android:name=".activity.mine.receipt.ReceiptActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--用户设置-->
+        <activity android:name=".activity.mine.settings.UserSettingActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--领取代金券界面-->
+        <activity android:name=".activity.mine.property.GetVoucherActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--充值明细界面-->
+        <activity android:name=".activity.mine.property.ChargeCapitalActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--用户反馈界面-->
+        <activity android:name=".activity.mine.settings.UserFeedbackActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--修改密码界面 支付密码界面-->
+        <activity android:name=".activity.guid.register.ModifyPwdActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--获取验证码界面-->
+        <activity android:name=".activity.guid.register.GetVerifyCodeActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--绑定邮箱手机-->
+        <activity android:name=".activity.guid.register.ConformMobileOrEmailActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--绑定界面-->
+        <activity android:name=".activity.guid.register.BindMobileOrEmailActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--店铺收藏界面-->
+        <activity android:name=".activity.collection.ShopCollectionActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <!--订单服务评价界面-->
+        <activity android:name=".activity.mine.order.OrderEvaluateActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <!-- 退款详情页-->
+        <activity android:name=".activity.mine.order.RefundDetailsActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <!--申请退款界面-->
+        <activity android:name=".activity.mine.order.RefundOrderActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+        <!--我的退款界面-->
+        <activity android:name=".activity.mine.order.MyRefundListActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--微信第三方登录-->
+        <activity android:name=".wxapi.WXEntryActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan"
+                  android:exported="true"
+                  android:launchMode="singleTop">
+        </activity>
+        <!--微信支付-->
+        <activity android:name=".wxapi.WXPayEntryActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan"
+                  android:exported="true"
+                  android:launchMode="singleTop">
+        </activity>
+        <!--QQ 第三方登录：在AndroidManifest文件里面注册SDK里面提供的Activity-->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:noHistory="true"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="1105580503" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
+        <!--第三方登录界面-->
+        <activity android:name=".activity.guid.register.ThirdLoginActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+        <!--订单详情-->
+        <activity android:name=".activity.mine.order.OrderActivity"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="stateHidden|adjustPan">
+        </activity>
+
+
+
+    </application>
+
+</manifest>

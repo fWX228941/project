@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+    >
+    <!--1，控件内内容内缩，用paddingLeft-->
+    <!--2。高度一分为2，则使用layout_weight(1.0)+layout_height-->
+    <TextView
+        android:id="@+id/catalog"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:background="#efeff4"
+        android:textColor="#333333"
+        android:textSize="10sp"
+        android:paddingLeft="12dp"
+        android:gravity="center_vertical"
+        android:text="A"/>
+    <!--3.内容位于竖中间gravity center_vertical -->
+    <!--4.约定高度，只需要在父控件修改高度wrap content，其子控件的高度自然修改
+     决定高度后，只要paddingTop 和paddingBottom两个属性的值设置为相同的大小
+      -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/button_city"
+        android:textColor="#333333"
+        android:paddingLeft="12dp"
+        android:textSize="15sp"
+        android:text="安庆"
+        />
+</LinearLayout>

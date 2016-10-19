@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/o_eyes" android:state_pressed="true"/>
+    <item android:drawable="@drawable/c_eyes" android:state_pressed="false"/>
+    <!--default/不点击时的效果图片应该放在下面，才会有点击效果，excuse me?Android 怎么这么多坑-->
+</selector>

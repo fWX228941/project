@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!--标题栏-->
+    <include layout="@layout/header_layout"
+             android:id="@+id/include"/>
+    <com.android.haobanyi.view.ProgressActivity
+        android:id="@+id/progressActivity"
+        android:layout_below="@+id/include"
+        android:layout_above="@+id/id_rl_foot"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    <ExpandableListView
+        android:id="@+id/id_elv_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:scrollbars="none"
+        android:groupIndicator="@null"
+        android:dividerHeight="0dp"
+        android:childDivider="@color/white"
+        android:footerDividersEnabled="false">
+    </ExpandableListView>
+    </com.android.haobanyi.view.ProgressActivity>
+    <!--底部结算统计栏-->
+    <!--覆盖的方法重写-->
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/activity_tab_shopping_footer"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/id_rl_foot"/>
+</RelativeLayout>

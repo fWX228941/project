@@ -1,0 +1,32 @@
+
+<com.android.haobanyi.view.ProgressActivity
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/progressActivity"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+<!--把 这个mainLayoutId和scrollbarStyle 属性删除掉
+        app:layout_empty="@layout/view_empty"
+        app:layout_moreProgress="@layout/view_more_progress"
+
+            progressActivity:loadingBackgroundColor="#FFFFFF"
+    progressActivity:emptyBackgroundColor="#fbc02d"
+    progressActivity:emptyContentTextColor="#FFFFFF"
+    progressActivity:emptyTitleTextColor="#FFFFFF"
+    progressActivity:errorBackgroundColor="#42a5f5"
+    progressActivity:errorButtonTextColor="#fbc02d"
+    progressActivity:errorContentTextColor="#fbc02d"
+    progressActivity:errorTitleTextColor="#FFFFFF"
+        xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
+
+ -->
+    <com.malinskiy.superrecyclerview.SuperRecyclerView
+        android:id="@+id/superRecyclerView_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#efeff4"
+        app:recyclerClipToPadding="false"
+        android:scrollbars="none"
+        />
+</com.android.haobanyi.view.ProgressActivity>

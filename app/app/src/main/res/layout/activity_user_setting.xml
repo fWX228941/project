@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#efeff4"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <com.android.haobanyi.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View style="@style/line_horizontal_default01"
+          android:layout_height="12dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/text_modity_psw"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="12dp" >
+            <!-- 我的联系人 -->
+            <TextView
+                android:id="@+id/_text_mine_contact"
+                style="@style/txt_grey_normal_black"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_action_bar"
+                android:drawableLeft="@drawable/user_icon1"
+                android:drawablePadding="@dimen/spacing_default"
+                android:drawableRight="@drawable/register_bnt_advance"
+                android:gravity="left|center_vertical"
+                android:paddingRight="12dp"
+                android:text="修改密码"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="建议您定期修改密码以保护账号安全"
+            android:id="@+id/text_mine_contact_"
+            android:layout_marginLeft="12dp"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#666666"/>
+    </LinearLayout>
+    <View style="@style/line_horizontal_default"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/text_phone_vertify"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="12dp" >
+            <!-- 我的联系人 -->
+            <TextView
+                android:id="@+id/_text_phone_vertify"
+                style="@style/txt_grey_normal_black"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_action_bar"
+                android:drawableLeft="@drawable/user_icon2"
+                android:drawablePadding="@dimen/spacing_default"
+                android:drawableRight="@drawable/register_bnt_advance"
+                android:gravity="left|center_vertical"
+                android:paddingRight="12dp"
+                android:text="绑定手机"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="若您的手机已丢失或停止使用，请立即修改变更"
+            android:id="@+id/text_phone_vertify_"
+            android:layout_marginLeft="12dp"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#666666"/>
+    </LinearLayout>
+    <View style="@style/line_horizontal_default"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:id="@+id/text_message_vertify"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="12dp" >
+            <!-- 我的联系人 -->
+            <TextView
+                android:id="@+id/_text_message_vertify"
+                style="@style/txt_grey_normal_black"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_action_bar"
+                android:drawableLeft="@drawable/mine_icon1_4"
+                android:drawablePadding="@dimen/spacing_default"
+                android:drawableRight="@drawable/register_bnt_advance"
+                android:gravity="left|center_vertical"
+                android:paddingRight="12dp"
+                android:text="绑定邮箱"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="若您的邮箱停止使用，请立即修改变更"
+            android:id="@+id/text_message_vertify_"
+            android:layout_marginLeft="12dp"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#666666"/>
+    </LinearLayout>
+    <View style="@style/line_horizontal_default"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:id="@+id/text_pswd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="12dp" >
+            <!-- 我的联系人 -->
+            <TextView
+                android:id="@+id/_text_pswd"
+                style="@style/txt_grey_normal_black"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_action_bar"
+                android:drawableLeft="@drawable/user_icon3"
+                android:drawablePadding="@dimen/spacing_default"
+                android:drawableRight="@drawable/register_bnt_advance"
+                android:gravity="left|center_vertical"
+                android:paddingRight="12dp"
+                android:text="支付密码"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="建议您设置修改复杂的支付密码以保护账户金额安全"
+            android:id="@+id/text_pswd_"
+            android:layout_marginLeft="12dp"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#666666"/>
+    </LinearLayout>
+    <View style="@style/line_horizontal_default"/>
+    <View style="@style/line_horizontal_default01"
+          android:layout_height="12dp"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:id="@+id/text_user_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="12dp" >
+            <!-- 我的联系人 -->
+            <TextView
+                android:id="@+id/_text_user_feedback"
+                style="@style/txt_grey_normal_black"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_action_bar"
+                android:drawableLeft="@drawable/user_icon4"
+                android:drawablePadding="@dimen/spacing_default"
+                android:drawableRight="@drawable/register_bnt_advance"
+                android:gravity="left|center_vertical"
+                android:paddingRight="12dp"
+                android:text="用户反馈"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您在使用过程中遇到的问题与建议可向我们反馈"
+            android:id="@+id/text_user_feedback_"
+            android:layout_marginLeft="12dp"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#666666"/>
+    </LinearLayout>
+    <View style="@style/line_horizontal_default"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_below="@+id/id_hint"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="6dp"
+            android:onClick="onClick"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:background="@drawable/login_edittext_shape"
+            android:layout_gravity="center_horizontal"
+            android:text="退出登录" />
+        <TextView
+            android:id="@+id/id_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="手机号码有误"
+            android:textSize="12sp"
+            android:textColor="#ff3b2f"
+            android:paddingLeft="22dp"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

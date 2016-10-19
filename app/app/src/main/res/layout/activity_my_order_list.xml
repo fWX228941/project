@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <com.android.haobanyi.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.ogaclejapan.smarttablayout.SmartTabLayout
+            android:id="@+id/smartTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tab_height"
+            android:background="#f5f5f6"
+            app:stl_customTabTextLayoutId="@layout/custom_tab_like_a_medium"
+            app:stl_customTabTextViewId="@+id/custom_text"
+            app:stl_indicatorColor="#f38900"
+            app:stl_indicatorInterpolation="linear"
+            app:stl_indicatorThickness="2dp"
+            app:stl_distributeEvenly="true"
+            app:stl_underlineThickness="1dp"
+            app:stl_overlineThickness ="1dp"
+            app:stl_overlineColor="#00000000"
+            app:stl_underlineColor="#00000000"
+            app:stl_dividerColor="#00000000"
+            />
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#efeff4"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <com.android.haobanyi.view.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:id="@+id/ScrollView" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <View style="@style/line_horizontal_default01"
+          android:layout_height="20dp"/>
+    <EditText
+        android:id="@+id/edit_companyname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="单位名称"
+        android:background="@color/white"
+        android:paddingLeft="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="16sp"
+        android:singleLine="false"
+        android:gravity="left"
+        android:maxLength="200"
+        android:textColorHint="@color/font_hint_text_color"
+        android:textColor="#666666">
+        <requestFocus />
+    </EditText>
+    <View style="@style/line_horizontal_default"/>
+    <EditText
+        android:id="@+id/edit_identitycode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="纳税人识别码"
+        android:background="@color/white"
+        android:paddingLeft="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="16sp"
+        android:singleLine="false"
+        android:maxLength="50"
+        android:textColorHint="@color/font_hint_text_color"
+        android:gravity="left"
+        android:textColor="#666666">
+    </EditText>
+    <View style="@style/line_horizontal_default01"
+          android:layout_height="20dp"/>
+    <EditText
+        android:id="@+id/edit_registeraddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="注册地址"
+        android:maxLength="200"
+        android:background="@color/white"
+        android:textColorHint="@color/font_hint_text_color"
+        android:paddingLeft="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="16sp"
+        android:singleLine="false"
+        android:gravity="left"
+        android:textColor="#666666">
+    </EditText>
+    <View style="@style/line_horizontal_default"/>
+    <EditText
+        android:id="@+id/edit_registerphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="注册电话"
+        android:maxLength="50"
+        android:textColorHint="@color/font_hint_text_color"
+        android:background="@color/white"
+        android:paddingLeft="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="16sp"
+        android:singleLine="false"
+        android:gravity="left"
+        android:textColor="#666666">
+    </EditText>
+    <View style="@style/line_horizontal_default"/>
+    <EditText
+        android:id="@+id/edit_bankname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="银行名称"
+        android:maxLength="100"
+        android:background="@color/white"
+        android:textColorHint="@color/font_hint_text_color"
+        android:paddingLeft="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="16sp"
+        android:singleLine="false"
+        android:gravity="left"
+        android:textColor="#666666">
+    </EditText>
+    <View style="@style/line_horizontal_default"/>
+    <EditText
+        android:id="@+id/edit_bankaccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="银行账户"
+        android:maxLength="50"
+        android:textColorHint="@color/font_hint_text_color"
+        android:background="@color/white"
+        android:paddingLeft="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="16sp"
+        android:singleLine="false"
+        android:gravity="left"
+        android:textColor="#999999">
+    </EditText>
+
+            <View style="@style/line_horizontal_default01"
+                  android:layout_height="20dp"
+                  android:id="@+id/view2"/>
+
+            <EditText
+        android:id="@+id/edit_ConsigneeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="收票人名称"
+        android:maxLength="50"
+        android:textColorHint="@color/font_hint_text_color"
+        android:background="@color/white"
+        android:paddingLeft="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="16sp"
+        android:singleLine="false"
+        android:gravity="left"
+        android:textColor="#999999">
+    </EditText>
+    <View style="@style/line_horizontal_default"/>
+    <EditText
+        android:id="@+id/edit_ConsigneePhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="收票人电话"
+        android:maxLength="50"
+        android:textColorHint="@color/font_hint_text_color"
+        android:background="@color/white"
+        android:paddingLeft="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="16sp"
+        android:singleLine="false"
+        android:gravity="left"
+        android:textColor="#999999">
+    </EditText>
+    <View style="@style/line_horizontal_default"/>
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:id="@+id/service_add"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="省/市/区"
+            android:id="@+id/textView51"
+            android:layout_marginLeft="12dp"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView53"
+            android:src="@drawable/register_bnt_advance"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <View style="@style/line_horizontal_default"/>
+    <EditText
+        android:id="@+id/edit_ConsigneeAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="200"
+        android:hint="收票人详细地址"
+        android:textColorHint="@color/font_hint_text_color"
+        android:background="@color/white"
+        android:paddingLeft="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textSize="16sp"
+        android:singleLine="false"
+        android:gravity="left"
+        android:textColor="#999999">
+    </EditText>
+
+    <TextView
+        android:id="@+id/id_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发票类别为默认"
+        android:textSize="14sp"
+        android:gravity="right"
+        android:visibility="gone"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#333333"
+        android:paddingLeft="12dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_below="@+id/id_hint"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="6dp"
+            android:onClick="onClick"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:background="@drawable/login_edittext_shape"
+            android:layout_gravity="center_horizontal"
+            android:text="保存发票信息" />
+        <TextView
+            android:id="@+id/id_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="手机号码有误"
+            android:textSize="12sp"
+            android:textColor="#ff3b2f"
+            android:paddingLeft="22dp"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+    </com.android.haobanyi.view.StickyScrollView>
+</LinearLayout>

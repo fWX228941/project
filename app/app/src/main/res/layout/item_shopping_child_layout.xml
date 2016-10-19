@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:timeline="http://schemas.android.com/apk/res-auto"
+                 android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+    <!--选用相对布局，原来是为了实现覆盖效果的,这样的效果确实好多了-->
+    <!--android:focusable="false" 不占用原有View点击事件
+            timeline:timeline_indicatorSize ="10dp"
+        timeline:timeline_indicatorColor ="#d1d6db"
+    -->
+<FrameLayout
+    android:layout_width="wrap_content"
+    android:id="@+id/id_cb_select_child_"
+    android:gravity="center_vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="5dp"
+    android:layout_height="70dp">
+    <com.alorma.timeline.RoundTimelineView
+        android:id="@+id/timeline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        timeline:timeline_type="start"
+        timeline:timeline_lineColor ="#d1d6db"
+        timeline:timeline_indicatorColor ="#d1d6db"
+        timeline:timeline_indicatorSize ="4dp"
+        timeline:timeline_lineWidth ="1dp"
+        timeline:timeline_lineStyle="linear"/>
+    <CheckBox
+        android:id="@+id/id_cb_select_child"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_gravity="center_vertical"
+        android:visibility="visible"
+        android:background="@null"
+        android:focusable="false"
+        android:checked="true"
+        android:button="@drawable/selector_check_bg"/>
+</FrameLayout>
+
+
+    <!--这样的一分为二也是可行的-->
+    <LinearLayout
+        android:id="@+id/id_ll_normal"
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@id/id_iv_logo"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            >
+            <!--自动为10 这个都是可以的，不科学   android:layout_width="wrap_content"-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            >
+
+            <TextView
+                android:id="@+id/tv_items_child"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="#333333"
+                android:maxWidth="185dp"
+                android:text=",商品名称商品名称商品名称商品名称商品名称商品名称商品名称"
+                android:singleLine="true"/>
+        </LinearLayout>
+            <TextView
+                android:id="@+id/id_tv_discount_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"
+                android:text="10000000"
+                android:textColor="#ff3b2f"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+<!--
+
+      android:text="服务：公司注册 商标注册"
+-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            >
+            <TextView
+                android:id="@+id/tv_items_child_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/font_orange_pay"
+                android:textSize="12sp"
+                android:text="请选择其他服务"
+                android:visibility="visible"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/id_tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:text="@string/product_count"
+                android:textColor="#333333"
+                android:textSize="12dp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <!-- android:visibility="gone"-->
+    <LinearLayout
+        android:id="@+id/id_ll_edtoring"
+        android:layout_toRightOf="@id/id_iv_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:id="@+id/ll_change_num"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/id_iv_reduce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_reduce"
+
+                    />
+<!--                    android:background="@drawable/textview_shap_stroke"-->
+                <TextView
+                    android:id="@+id/id_tv_count_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="1"
+                    android:textSize="18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+                <ImageView
+                    android:id="@+id/id_iv_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/other_service"
+                android:visibility="visible"
+                android:orientation="horizontal">
+                <!--最多三行显示-->
+                <TextView
+                    android:id="@+id/id_tv_des_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择其他服务 "
+                    android:singleLine="false"
+                    android:maxLines="3"
+                    android:textColor="@color/font_orange_pay"
+                    />
+                <!--android:drawableRight="@drawable/shopping_ud_arrow-"-->
+                <ImageView
+                    android:id="@+id/id_iv_list"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/shopping_ud_arrow_"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/id_tv_goods_star"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@android:color/holo_orange_light"
+            android:text="收藏"
+            android:textColor="@android:color/white"
+            android:padding="13dp"
+            android:gravity="center"
+            android:layout_marginRight="2dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_width="60dp"
+            android:id="@+id/id_tv_goods_delete"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/textview_red_selector"
+            android:text="删除"
+            android:textColor="@android:color/white"
+            android:padding="13dp"
+            android:gravity="center"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/id_iv_logo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        android:padding="5dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/id_cb_select_child_"
+        android:layout_toEndOf="@+id/id_cb_select_child_"/>
+
+
+</RelativeLayout>

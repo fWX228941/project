@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#efeff4"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <com.android.haobanyi.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View style="@style/line_horizontal_default01"
+          android:layout_height="12dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="设置新密码："
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:gravity="left"/>
+        <!--这里存在一个bug 就是但我同时设置数据和邮箱时，邮箱是不支持的，所以干脆去掉-->
+        <com.android.haobanyi.view.ClearEditText
+            android:id="@+id/edit_pwd_old"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_edittext_sharp"
+            android:textSize="16sp"
+            android:paddingRight="12dp"
+
+            android:textColor="#333333">
+            <requestFocus />
+        </com.android.haobanyi.view.ClearEditText>
+    </LinearLayout>
+    <View style="@style/line_horizontal_default"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="确认新密码："
+            android:textSize="16sp"
+            android:textColor="#666666"
+            android:gravity="left"/>
+        <!--这里存在一个bug 就是但我同时设置数据和邮箱时，邮箱是不支持的，所以干脆去掉-->
+        <com.android.haobanyi.view.ClearEditText
+            android:id="@+id/edit_pwd_new"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:paddingRight="12dp"
+            android:background="@drawable/custom_edittext_sharp"
+            android:textSize="16sp"
+            android:textColor="#333333">
+        </com.android.haobanyi.view.ClearEditText>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_below="@+id/id_hint"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="6dp"
+            android:onClick="onClick"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:background="@drawable/login_edittext_shape"
+            android:layout_gravity="center_horizontal"
+            android:text="确认修改" />
+        <TextView
+            android:id="@+id/id_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="手机号码有误"
+            android:textSize="12sp"
+            android:textColor="#ff3b2f"
+            android:paddingLeft="22dp"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

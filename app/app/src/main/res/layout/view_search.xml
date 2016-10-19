@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- android:tag="sticky-hastransparancy"-->
+<!--    <com.android.haobanyi.view.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:scrollbars="none"
+        android:id="@+id/ScrollView" -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center_vertical"
+                android:id="@+id/linearLayout"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/id_textView_back"
+                    android:src="@drawable/back_icon"
+                    android:background="@color/white"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="16dp"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/id_editText_search"
+                    android:hint="公司注册"
+                    android:textSize="12sp"
+                    android:textColor="#bbbbbb"
+                    android:background="@drawable/search_edittext_shape">
+                    <requestFocus />
+                </TextView>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:id="@+id/id_textView_search_more"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/id_textView_search_more01"
+                        android:src="@drawable/searching_more"
+                        android:layout_gravity="center"
+                        android:paddingRight="12dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <include layout="@layout/activity_store_page_01"></include>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <com.ogaclejapan.smarttablayout.SmartTabLayout
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/smartTabLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/tab_height"
+                            android:background="#f5f5f6"
+                            app:stl_customTabTextLayoutId="@layout/custom_tab_like_a_medium"
+                            app:stl_customTabTextViewId="@+id/custom_text"
+                            app:stl_indicatorColor="#f38900"
+                            app:stl_indicatorInterpolation="linear"
+                            app:stl_indicatorThickness="2dp"
+                            app:stl_distributeEvenly="true"
+                            app:stl_underlineThickness="1dp"
+                            app:stl_overlineThickness ="1dp"
+                            app:stl_overlineColor="#00000000"
+                            app:stl_underlineColor="#00000000"
+                            app:stl_dividerColor="#00000000"
+                            />
+                        <!--这个地方存在一个bug 就是高度问题，我设置的固定的高度600dp-->
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/viewpager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/index_home_memus_content"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_black_pay"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_gravity="right|top"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true">
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textview_scan_code"
+                        style="@style/txt_default_level_1"
+                        android:drawableLeft="@drawable/home_navibar_tips_icon_scan"
+                        android:visibility="visible"
+                        android:text="扫一扫" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textview_home"
+                        style="@style/txt_default_level_1"
+                        android:drawableLeft="@drawable/serach_pop_ups_home"
+                        android:text="主页" />
+
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textview_search"
+                        android:drawableLeft="@drawable/search_history_icon"
+                        style="@style/txt_default_level_1"
+                        android:text="搜索" />
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <!--在用相对布局的时候下面的覆盖上面的，排序也是很重要的-->
+
+
+        </LinearLayout>
+
+<!--    </com.android.haobanyi.view.StickyScrollView>-->
+

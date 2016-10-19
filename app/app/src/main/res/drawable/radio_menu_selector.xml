@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+   <!--radio button 的统一selector样式  废弃了-->
+    <item android:drawable="@drawable/radio_radio_checked" android:state_checked="true"/>
+    <item android:drawable="@drawable/radio_radio_checked" android:state_checked="false"/>
+    <item android:drawable="@drawable/radio_radio_checked"/>
+</selector>

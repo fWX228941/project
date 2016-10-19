@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<im.delight.android.webview.AdvancedWebView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/webview"
+    android:background="#efeff4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+
+
+
+
+
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#efeff4"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <com.android.haobanyi.view.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ScrollView"
+        android:scrollbars="none"
+        android:fillViewport="false">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小规模代理记账"
+                android:layout_marginTop="22dp"
+                android:textSize="19sp"
+                android:textColor="#333333"
+                android:id="@+id/product_name"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:singleLine="false"
+                android:text="测试测试测试"
+                android:layout_marginTop="12dp"
+                android:textSize="15sp"
+                android:textColor="#666666"
+                android:id="@+id/editText7"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务内容"
+                android:layout_marginTop="24dp"
+                android:textSize="19sp"
+                android:textColor="#333333"
+                android:id="@+id/editText8"/>
+        &lt;!&ndash;android:ems = "10"设置tv的长度为10个字符的长度。超出部分将不显示&ndash;&gt;
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:singleLine="false"
+                android:text="测试测试测试"
+                android:layout_marginTop="12dp"
+                android:textSize="15sp"
+                android:textColor="#666666"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/editText9"/>
+        </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:id="@+id/product_img"
+                android:src="@drawable/big_image"
+                android:visibility="visible"/>
+        </LinearLayout>
+    </com.android.haobanyi.view.StickyScrollView>
+
+</LinearLayout>-->

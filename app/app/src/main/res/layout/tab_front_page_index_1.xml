@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--        android:layout_height="@dimen/spacing_action_bar"
+        android:layout_marginTop="@dimen/spacing_small"-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/transparent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/head">
+
+        <TextView
+            android:id="@+id/home_city_from"
+            style="@style/txt_white_normal"
+            android:drawablePadding="@dimen/spacing_small_plus"
+            android:drawableRight="@drawable/home_icon_down"
+            android:paddingLeft="@dimen/spacing_middle_mimus"
+            android:paddingRight="@dimen/spacing_middle_mimus"
+            android:text="@string/test_city"
+            android:textSize="14sp"
+            android:textColor="#ffffff"/>
+        <!--不可编辑，但是可以点击-->
+        <EditText
+            android:id="@+id/edit_search"
+            style="@style/edit_default"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_edit_bg"
+            android:drawableLeft="@drawable/home_icon_seek"
+            android:drawablePadding="@dimen/spacing_small"
+            android:hint="@string/front_page_header_edit_hint"
+            android:editable="false"
+            android:layout_marginTop="9dp"
+            android:layout_marginBottom="9dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textSize="13sp"
+            android:textColor="@color/line_grey_sign" >
+        </EditText>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <!--ImageView的contentDescription属性：缺省图片时显示的文字-->
+            <ImageView
+                android:id="@+id/imageView_pull_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:paddingLeft="@dimen/spacing_default"
+                android:paddingRight="@dimen/spacing_default"
+                android:paddingTop="@dimen/spacing_default"
+                android:paddingBottom="@dimen/spacing_default"
+                android:visibility="visible"
+                android:src="@drawable/home_icon_add" />
+            <ImageView
+                android:id="@+id/index_home_tips_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:src="@drawable/home_title_tips_arrow"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+

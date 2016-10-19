@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_gravity="center"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="@drawable/card_foreground"
+    card_view:cardBackgroundColor="#ffffff"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="2dp"
+    card_view:contentPadding="12dp"
+    card_view:cardUseCompatPadding="true">
+<LinearLayout
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+<!--    <View style="@style/line_horizontal_default01"
+          android:layout_height="12dp"/>-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开业大酬宾"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/title_tv"/>
+    <!--这个地方直接传递一个string 过来就好了-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/voucher_content"
+        android:textSize="18dp"
+        android:textColor="#ff3b2f"
+        android:id="@+id/content_tv"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有效期："
+            android:textColor="#999999"
+            android:id="@+id/textView4"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016.01.11-"
+            android:textColor="#999999"
+            android:id="@+id/start_time"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016.02.11"
+            android:textColor="#999999"
+            android:id="@+id/end_time"/>
+    </LinearLayout>
+</LinearLayout>
+</android.support.v7.widget.CardView>

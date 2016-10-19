@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <com.android.haobanyi.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <!--颜色还是黑色，算了，先把这些给替换过来，到时会进行优化的-->
+    <com.android.haobanyi.view.ProgressActivity
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/progressActivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@+id/title_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+        <com.malinskiy.superrecyclerview.SuperRecyclerView
+            android:id="@+id/superRecyclerView_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#efeff4"
+            app:recyclerClipToPadding="false"
+            android:scrollbars="none"
+            />
+    </com.android.haobanyi.view.ProgressActivity>
+</RelativeLayout>

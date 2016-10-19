@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#efeff4"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <com.android.haobanyi.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.android.haobanyi.view.ClearEditText
+        android:id="@+id/edit_name"
+        android:layout_width="match_parent"
+        android:paddingLeft="12dp"
+        android:layout_height="38dp"
+        android:hint="姓名"
+        android:background="@drawable/custom_edittext_sharp"
+        android:textSize="15sp"
+        android:paddingRight="12dp"
+        android:textColor="#666666">
+        <requestFocus />
+    </com.android.haobanyi.view.ClearEditText>
+    <View style="@style/line_horizontal_default"/>
+    <com.android.haobanyi.view.ClearEditText
+        android:id="@+id/edit_phone"
+        android:paddingLeft="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:hint="手机号码"
+        android:paddingRight="12dp"
+        android:background="@drawable/custom_edittext_sharp"
+        android:textSize="15sp"
+        android:textColor="#666666">
+
+    </com.android.haobanyi.view.ClearEditText>
+    <View style="@style/line_horizontal_default"/>
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:id="@+id/service_add"
+        android:layout_height="38dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="省/市/区"
+            android:id="@+id/textView51"
+            android:layout_marginLeft="12dp"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:textColor="#666666"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView53"
+            android:src="@drawable/register_bnt_advance"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <View style="@style/line_horizontal_default"/>
+    <com.android.haobanyi.view.ClearEditText
+        android:id="@+id/edit_add"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:hint="详细地址"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:background="@drawable/custom_edittext_sharp"
+        android:singleLine="false"
+        android:textSize="15sp"
+        android:textColor="#666666">
+    </com.android.haobanyi.view.ClearEditText>
+    <View style="@style/line_horizontal_default"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_below="@+id/id_hint"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="6dp"
+            android:onClick="onClick"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:background="@drawable/login_edittext_shape"
+            android:layout_gravity="center_horizontal"
+            android:text="保存"  />
+        <TextView
+            android:id="@+id/id_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="手机号码有误"
+            android:textSize="12sp"
+            android:textColor="#ff3b2f"
+            android:paddingLeft="22dp"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

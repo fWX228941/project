@@ -1,0 +1,125 @@
+<!--
+ Copyright (C) 2015. Keegan小钢（http://keeganlee.me）
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<resources>
+    <string name="app_name">好办易</string>
+
+    <!-- 页面标题 -->
+    <string name="title_activity_login">登录</string>
+    <string name="title_activity_register">注册</string>
+    <string name="title_activity_re_password">找回密码</string>
+    <string name="title_activity_coupon_list">最新券</string>
+
+    <!-- ActionBar -->
+    <string name="action_register">注册</string>
+
+    <!-- 按钮文字 -->
+    <string name="btn_login">登录</string>
+    <string name="btn_register">注册</string>
+    <string name="btn_send_code">发送验证码</string>
+
+    <!-- EditText hint -->
+    <string name="hint_phone">手机号码</string>
+    <string name="hint_password">密码</string>
+    <string name="hint_code">验证码</string>
+
+    <!-- Toast信息 -->
+    <string name="toast_login_success">登录成功</string>
+    <string name="toast_code_has_sent">验证码已发送到手机</string>
+    <string name="toast_register_success">注册成功</string>
+
+    <!--重置界面-->
+    <string name="title_activity_forget_password">重置界面</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="re_password">重置密码</string>
+    <string name="btn_confirm_password">重置密码</string>
+    <string name="toast_resetpassword_success">重置密码成功</string>
+    <string name="register_account">注册账号</string>
+    <string name="forget_password">找回密码</string>
+    <!-- ==============================首页底部导航============================== -->
+    <string name="home_page">主页</string>
+    <string name="mine">我的</string>
+    <string name="shopping">购物车</string>
+    <string name="collection">收藏</string>
+    <string name="front_page_header_edit_hint">公司注册</string>
+    <!--首页产品类型-->
+    <string name="product_type_1">工商注册</string>
+    <string name="product_type_2">商标专利</string>
+    <string name="product_type_3">知识产权</string>
+    <string name="product_type_4">外贸代理</string>
+    <string name="product_type_5">法律服务</string>
+    <string name="product_type_6">财会税务</string>
+    <!--测试城市，到时替换-->
+    <string name="test_city">南山区</string>
+    <string name="product_theme_1">附近服务信息</string>
+
+    <!--我的模块-->
+
+    <string name="nickname">昵称</string>
+    <string name="text_mine_information">我的消息</string>
+    <string name="text_mine_service_collection">服务收藏</string>
+    <string name="text_mine_shop_collection">店铺收藏</string>
+    <string name="text_mine_order">我的订单</string>
+    <string name="text_mine_refund">退款</string>
+    <string name="text_mine_to_evaluated">待评价</string>
+    <string name="text_mine_be_handled">待确认</string>
+    <string name="text_mine_to_handle">待办理</string>
+    <string name="text_mine_to_pay">待付款</string>
+    <string name="text_mine_property">我的财产</string>
+    <string name="text_mine_credit">积分</string>
+    <string name="text_mine_red_envelope">红包</string>
+    <string name="text_mine_voucher">代金券</string>
+    <string name="text_mine_ready_pay">账户余额</string>
+    <string name="text_mine_code_extension">我的推广码</string>
+    <string name="text_mine_contact">我的联系人</string>
+    <string name="text_mine_settings">用户设置</string>
+    <string name="textview_third_account">合作账号登录</string>
+    <!--计时-->
+    <string name="count_down">%ss</string>
+    <!--重新发送验证码-->
+    <string name="re_send_code">重新发送</string>
+    <!--二维码提示：符号需要\反斜杠转义-->
+    <string name="scan_tips">\"将二维码图片对准扫描框即可自动扫描\"</string>
+
+    <!--progress-->
+    <string name="progressActivityErrorButton">点击重新加载</string>
+    <string name="progressActivityEmptyTitlePlaceholder">Nothing Here</string>
+    <string name="progressActivityEmptyContentPlaceholder">暂时没有找到相关内容</string>
+    <string name="progressActivityErrorTitlePlaceholder">No Connection</string>
+    <string name="progressActivityErrorContentPlaceholder">加载失败，请请检查网络，并再次加载</string>
+
+    <!--购物车-->
+    <string name="product_count">x %s</string>
+    <string name="price">￥%s</string>
+    <string name="total">  合计：￥%s</string>
+    <string name="jiesuan">结算（%s）</string>
+    <string name="voucher_content">单笔订单满1000元减100元\n单笔订单满1000元减100元</string>
+    <string name="voucher_content_formate">优惠活动：单笔订单满%1$s元减%2$s元\n</string>
+    <string name="order_content_formate">共%1$s件商品 合计%2$s元\n</string>
+    <string name="endTime_content_formate">使用期限：%1$s 到 %2$s\n</string>
+
+
+    <!--服务中心订单满1000元使用-->
+    <string name="price_vt">￥%s元</string>
+    <string name="limit">订单满%s元使用</string>
+    <string name="limit_time">使用期限：%1$s-%2$s</string>
+
+    <!--微信第三方登录-->
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unknown">发送返回</string>
+
+</resources>

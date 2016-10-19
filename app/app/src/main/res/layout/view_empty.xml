@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--默认是有的，关联函数SuperRecyclerView.showMoreProgress/hideMoreProgress-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/errorStateContentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:lineSpacingExtra="5.5dp"
+        android:text="没有相关服务，用手下滑刷新一下"
+        android:layout_above="@+id/imageView4"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/dropdown"
+        android:id="@+id/imageView4"/>
+
+
+</RelativeLayout>

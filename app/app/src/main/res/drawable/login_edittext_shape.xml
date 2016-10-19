@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--为selector设置淡入淡出的效果-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+          android:enterFadeDuration="500"
+          android:exitFadeDuration="500">
+    <!--默认时-->
+    <item android:drawable="@drawable/bg_btn_normal"/>
+    <!--点击-->
+    <item android:drawable="@drawable/bg_btn_pressed" android:state_pressed="true"/>
+
+</selector>

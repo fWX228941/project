@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/errorStateRelativeLayout"
+                android:background="#efeff4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/errorStateImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/loading_logo"
+        android:layout_marginTop="5dp"
+        tools:ignore="ContentDescription"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+<!--lineSpacingExtra 还有这样的属性-->
+    <TextView
+        android:id="@+id/errorStateContentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        android:gravity="center"
+        android:lineSpacingExtra="5.5dp"
+        android:text="加载失败，请检查网络，并再次加载"
+        android:layout_below="@+id/errorStateImageView"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/errorStateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="点击重新加载"
+        android:background="#ff3b2f"
+        android:textColor="#ffffff"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@+id/errorStateContentTextView"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

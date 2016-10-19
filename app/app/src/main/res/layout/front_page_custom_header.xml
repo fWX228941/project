@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              style="@style/MatchWrap">
+
+    <FrameLayout
+        style="@style/MatchMatch" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+                <!--第一层-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--广告栏-->
+                    <include layout="@layout/tab_front_page_index_2"/>
+                    <!--分类栏
+                    -->
+                    <include layout="@layout/tab_front_page_index_3"/>
+<!--                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@color/tittle_module_background_white"/>-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:id="@+id/mock_test"
+                        android:text="附近信息"
+                        android:drawableLeft="@drawable/nearby_icon"
+                        android:drawablePadding="6dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:textSize="18sp"
+                        android:textColor="#333333"
+                        android:background="@color/tittle_view_background_white_"/>
+                </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <include layout="@layout/tab_front_page_index_1"/>
+            <LinearLayout
+                android:id="@+id/index_home_memus_content"
+                android:layout_width="120dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="129dp"
+                android:background="@color/black_transparent"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:layout_gravity="right">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/txt_default_level_1"
+                    android:drawableLeft="@drawable/home_navibar_tips_icon_nearbyshop"
+                    android:text="商铺列表" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textview_scan_code"
+                    style="@style/txt_default_level_1"
+                    android:drawableLeft="@drawable/home_navibar_tips_icon_scan"
+                    android:text="扫一扫" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textview_center"
+                    style="@style/txt_default_level_1"
+                    android:drawableLeft="@drawable/home_navibar_tips_icon_ordercenter"
+                    android:text="订单中心" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

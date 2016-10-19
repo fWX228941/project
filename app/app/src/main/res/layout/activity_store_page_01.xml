@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/heder_back">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/icon_map"
+            android:layout_gravity="center"
+            android:paddingLeft="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:id="@+id/tv_add"
+            android:text="地址：深圳市南山区虚拟大学园区好办易大厦R2-A栋北门203"
+            android:textSize="10sp"
+            android:textColor="#999999"
+            android:singleLine="true"
+            android:paddingLeft="5dp"
+            android:layout_gravity="center"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/shop_logo"
+            android:src="@drawable/logo_box"
+            android:layout_marginRight="6dp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/shop_name"
+                    android:text="御用闲人大兵官方旗舰店大嘎达挥洒和爱好如何"
+                    android:layout_marginTop="9dp"
+                    android:textSize="16sp"
+                    android:maxLines="1"
+                    android:textColor="#ffffff"/>
+                <!--在动态设置值的时候，除了位置属性，其他属性都有保留-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/shop_mainservice"
+                    android:text="服务范围：公司注册，社保代办，财务报表"
+                    android:maxLines="3"
+                    android:textSize="10sp"
+                    android:textColor="#999999"/>
+             </LinearLayout>
+
+
+    </LinearLayout>
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="60dp"
+                android:text="待收藏"
+                android:id="@+id/tv_isfav"
+                android:background="#f38900"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:onClick="collect"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

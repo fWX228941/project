@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="170dp"
+              android:visibility="visible">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/tittle_view_background_white_"/>
+        <!--第一行标题栏-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/tittle_view_background_white_"/>
+            <TextView
+                android:id="@+id/business_registration"
+                style="@style/txt_default_level_2"
+                android:drawableTop="@drawable/classify_icon_1"
+                android:text="@string/product_type_1" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/tittle_view_background_white_"/>
+            <TextView
+                android:id="@+id/txt_type_2"
+                style="@style/txt_default_level_2"
+                android:drawableTop="@drawable/classify_icon_2"
+                android:text="@string/product_type_2" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/tittle_view_background_white_"/>
+            <TextView
+                android:id="@+id/intellectual_property"
+                style="@style/txt_default_level_2"
+                android:drawableTop="@drawable/classify_icon_3"
+                android:text="@string/product_type_3" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/tittle_view_background_white_"/>
+            <TextView
+                android:id="@+id/id_foreign_trade_agency"
+                style="@style/txt_default_level_2"
+                android:drawableTop="@drawable/classify_icon_8"
+                android:text="外贸代理" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/tittle_view_background_white_"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/tittle_view_background_white_"/>
+
+        <!--第二行标题栏-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/tittle_view_background_white_"/>
+            <TextView
+                android:id="@+id/id_legal"
+                style="@style/txt_default_level_2"
+                android:drawableTop="@drawable/classify_icon_4"
+                android:text="法律服务" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/tittle_view_background_white_"/>
+            <TextView
+                android:id="@+id/id_economics"
+                style="@style/txt_default_level_2"
+                android:drawableTop="@drawable/classify_icon_5"
+                android:text="财会税务" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/tittle_view_background_white_"/>
+            <TextView
+                android:id="@+id/id_hongkong"
+                style="@style/txt_default_level_2"
+                android:drawableTop="@drawable/classify_icon_6"
+                android:text="香港公司" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/tittle_view_background_white_"/>
+            <TextView
+                android:id="@+id/id_domestic"
+                style="@style/txt_default_level_2"
+                android:drawableTop="@drawable/classify_icon_7"
+                android:text="国内公司" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/tittle_view_background_white_"/>
+        </LinearLayout>
+</LinearLayout>

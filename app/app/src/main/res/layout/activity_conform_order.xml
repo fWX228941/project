@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!--标题栏-->
+    <include layout="@layout/header_layout"/>
+
+    <!--购物车列表栏-->
+    <com.android.haobanyi.view.ProgressActivity
+        android:id="@+id/progressActivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <!--        android:divider="@null"-->
+    <ExpandableListView
+        android:id="@+id/id_elv_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:cacheColorHint="#00000000"
+        android:groupIndicator="@null"
+        android:dividerHeight="0dp"
+        android:childDivider="@color/white"
+        android:footerDividersEnabled="false"
+        >
+    </ExpandableListView>
+    </com.android.haobanyi.view.ProgressActivity>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/activity_conform_order_footer"
+        />
+</LinearLayout>

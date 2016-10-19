@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <!--1.头部中间选择城市，右边返回按钮标题栏 -->
+<!--    <com.android.haobanyi.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>-->
+
+        <!--标题栏-->
+        <com.android.haobanyi.view.TitleBar
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    <!--2.搜索输入框EditTextView，替换成带删除按钮的 gravity是文字居中显示，上下左右按比例缩放layout_margin-->
+    <com.android.haobanyi.view.ClearEditText
+        android:id="@+id/edit_city_search"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:hint="搜索城市"
+        android:background="@drawable/custom_edittext_sharp"
+        android:textSize="16sp"
+        android:textColor="#bbbbbb"
+        android:paddingLeft="12dp"
+        android:singleLine="true"
+        android:paddingRight="12dp"
+        android:gravity="center"
+        >
+        <requestFocus />
+    </com.android.haobanyi.view.ClearEditText>
+    <!--3.当前定位城市一个textView-->
+    <!--4.热门城市gridView-->
+    <!-- 覆盖关系使用framelayout-->
+    <!--5.城市列表-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--listView分割线只需要考虑两个属性，分别是分割线高度和颜色-->
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lv_city_search"
+            android:dividerHeight="2dp"
+            android:divider="@color/tittle_view_background_white_"/>
+        <!--6.滑动提示文字控-->
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#ff40c2ff"
+            android:background="#efeff4"
+            android:textSize="30dp"
+            android:visibility="invisible" />
+        <!--7.右边侧边栏-->
+        <com.android.haobanyi.view.SideBar
+            android:id="@+id/sidrbar"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"/>
+    </FrameLayout>
+
+
+</LinearLayout>

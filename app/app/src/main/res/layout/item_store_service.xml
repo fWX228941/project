@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_gravity="center"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="@drawable/card_foreground"
+    card_view:cardBackgroundColor="#ffffff"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="2dp"
+    card_view:contentPadding="12dp"
+    card_view:cardUseCompatPadding="true">
+    <!--cardView 属性：http://www.68idc.cn/help/mobilesys/android/20150116173778.html-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/item"
+        android:orientation="horizontal">
+        <!--左边的图片全面缩放10dp 这个高宽比是需要自己来自定义一个，来匹配不同的屏幕-->
+        <!--SixteenToTenImageView-->
+        <ImageView
+            android:id="@+id/list_item_icon_01"
+            android:layout_width="99dp"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            android:visibility="visible"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_id"
+            android:layout_toRightOf="@id/list_item_icon_01"
+            android:layout_marginLeft="6dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/item_product_name_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="小规模纳税人查账征收代理记账(12个月)"
+                android:singleLine="true"
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:layout_marginBottom="9dp"
+                android:layout_marginTop="12dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/li_text01"
+                android:layout_below="@id/item_product_name_01"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+<!--                <RatingBar
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:numStars="5"
+                    android:id="@+id/list_item_rate_01"/>-->
+                <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                    android:id="@+id/list_item_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:layout_gravity="left|center_vertical"
+                    app:srb_fillColor="@color/font_orange"
+                    app:srb_borderColor="@color/font_orange"
+                    app:srb_pressedFillColor="@color/font_orange"
+                    app:srb_pressedBorderColor="@color/font_orange"
+                    app:srb_isIndicator="true"
+                    app:srb_starSize="17dp"
+                    />
+
+                <TextView
+                    android:id="@+id/list_item_sales_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="6dp"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    android:text="销量44单"
+                    android:textColor="#666666"/>
+            </LinearLayout>
+<!--终于找到原因了，原来是颜色，为什么这个有其他的没有，就是因为颜色,如果默认是会随着系统颜色的-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/li_text02"
+                android:layout_below="@id/li_text01"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="12dp"
+                >
+                <TextView
+                    android:id="@+id/list_item_price_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="￥498.00"
+                    android:textColor="#666666"
+                    />
+                <TextView
+                    android:id="@+id/list_item_district_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="南山市南山区(223M)"
+                    android:textColor="#666666"
+                    android:paddingRight="10dp"/>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

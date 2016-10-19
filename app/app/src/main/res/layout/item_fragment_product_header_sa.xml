@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/id_iv_logo"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:padding="12dp"
+            android:src="@drawable/image2"
+            />
+        <LinearLayout
+            android:id="@+id/id_ll_normal"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/id_iv_logo"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                >
+                <TextView
+                    android:id="@+id/tv_items_child_01"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="#ff3b2f"
+                    android:text="￥168.8"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                >
+                <TextView
+                    android:id="@+id/tv_items_child_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#999999"
+                    android:text="已选：公司注册 商标注册">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/id_tv_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:text="x2"
+                    android:textSize="16sp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+                  android:orientation="vertical"
+                  android:layout_marginLeft="12dp"
+                  android:visibility="gone"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+        <View style="@style/line_horizontal_default"/>
+    <TextView
+        android:id="@+id/tv_items_child"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="其他服务"
+        />
+    </LinearLayout >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/tv_title"
+        android:gravity="center"
+        android:text="其他服务"
+        android:textSize="19sp"
+        android:textColor="#333333"/>
+</LinearLayout>

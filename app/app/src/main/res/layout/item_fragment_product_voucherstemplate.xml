@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<RelativeLayout
+              android:orientation="horizontal"
+              android:id="@+id/rele1"
+              android:paddingLeft="12dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="12dp"
+        android:id="@+id/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥100.00元"
+            android:textSize="19sp"
+            android:layout_marginBottom="6dp"
+            android:textColor="#ff3b2f"
+            android:id="@+id/tv_price_vt"/>
+        <!--这种情况下使用格式化参考http://blog.csdn.net/lonely_fireworks/article/details/7962171-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单满1000元使用"
+            android:textSize="12sp"
+            android:layout_marginBottom="6dp"
+            android:textColor="#333333"
+            android:id="@+id/tv_limit"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/line2"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="使用期限：2000.01.11-2000.02.11"
+                android:textColor="#999999"
+                android:id="@+id/tv_time_range"/>
+<!--            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016.01.11-"
+                android:textColor="#999999"
+                android:id="@+id/tv_startTime"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016.02.11"
+                android:textColor="#999999"
+                android:id="@+id/tv_endTime"/>-->
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="56dp"
+        android:layout_height="25dp"
+        android:text="领取"
+        android:id="@+id/tv_get_vt"
+        android:background="@drawable/bg_btn_normal_03"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:textColor="#f38900"
+        android:textSize="16sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="29dp"
+        android:layout_marginEnd="29dp"/>
+</RelativeLayout>
+    <View style="@style/line_horizontal_default"/>
+</LinearLayout>

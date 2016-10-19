@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_gravity="center"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="@drawable/card_foreground"
+    card_view:cardBackgroundColor="#ffffff"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="2dp"
+    card_view:contentPadding="10dp"
+    card_view:cardUseCompatPadding="true">
+<LinearLayout
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_weight="1">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/shop_name"
+                android:text="大斌旗舰店店铺"
+                android:textSize="15sp"
+                android:textColor="#333333"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:id="@+id/end_time"
+                android:text="使用期限：2016.01.11"
+                android:textSize="12sp"
+                android:textColor="#999999"/>
+    </LinearLayout>
+    <!-- 三种使用图案
+    property_used
+    property_coupon_none_bg
+    property_coupon_bg
+
+    vouchers
+    http://www.cnblogs.com/pandapan/p/4614837.html
+    ImageView的scaleType详解
+    -->
+    <FrameLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/use_voucher"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/property_coupon_bg"
+            android:layout_marginRight="6dp"
+            android:visibility="visible"
+            android:id="@+id/imageView1"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/property_coupon_none_bg"
+            android:layout_marginRight="6dp"
+            android:visibility="visible"
+            android:id="@+id/imageView2"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="￥100"
+                android:id="@+id/tv_price"
+                android:textColor="#ffffff"
+                android:textSize="19sp"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/transparent"
+                />
+            <View style="@style/line_horizontal_default"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="满6000使用"
+            android:id="@+id/tv_limit"
+            android:textSize="12sp"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:background="@color/transparent"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/property_used"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            android:id="@+id/imageView3"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+</LinearLayout>
+</android.support.v7.widget.CardView>

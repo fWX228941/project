@@ -1,0 +1,54 @@
+<resources>
+    <!-- =========FullscreenActionBarStyle的背景色======== -->
+    <color name="black_overlay">#66000000</color>
+    <color name="black">#222228</color>
+    <color name="transparent">#00000000</color>
+    <color name="line_grey_sign">#bbbbbb</color>
+    <color name="tittle_view_background_white">#555555</color>
+    <color name="grey_hint">#AAAAAA</color>
+    <color name="line_grey_mine">#AAAAAA</color>
+    <color name="default_line">#EEEDF2</color>
+    <color name="font_grey">#ff999999</color>
+    <color name="tittle_view_background_white_">#efeff4</color>
+    <!-- 黑色透明 -->
+    <color name="black_transparent">#99000000</color>
+    <!-- 75%灰色透明 代金券領取顏色 -->
+    <color name="grey_c0">#c0505050</color>
+    <!-- ========字体红======= -->
+    <color name="font_red">#f22424</color>
+    <!-- ==========字体橙 星星顏色========== -->
+    <color name="font_orange">#ffffc851</color>
+    <!--星星未被填充的顏色-->
+    <color name="font_grey_star">#C9C9C9</color>
+    <!-- ==========字体黑========== -->
+    <color name="font_black">#555555</color>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~支付页面~~~~~~~~~~~~~~~~~~~ -->
+    <color name="background_black_pay">#ff2f3438</color>
+    <!--其他服务的颜色-->
+    <color name="font_orange_pay">#fffd7823</color>
+    <!--收藏的背景色-->
+    <color name="cellect_orange">#f38900</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="white">#ffffff</color>
+
+    <!--底部tab字体颜色-->
+    <color name="font_tab_checked">#f39000</color>
+    <color name="font_tab_unchecked">#666666</color>
+    <color name="login">#007aff</color>
+    <color name="title_activity_register">#333333</color>
+    <!--pickerView-->
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="liji_c_blue">#26A5FF</color>
+    <color name="liji_material_blue_500">#03a9f4</color>
+    <color name="liji_material_blue_700">#0288d1</color>
+    <color name="liji_material_red_500">#e51c23</color>
+    <color name="liji_material_red_700">#d01716</color>
+    <color name="colorPrimaryDarkorange">#CCf57257</color>
+    <color name="colorPrimaryDarkTrans">#f57257</color>
+    <!--提示内容字体颜色-->
+    <color name="font_hint_text_color">#d1d6db</color>
+
+
+</resources>

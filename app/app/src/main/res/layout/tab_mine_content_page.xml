@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+    <View style="@style/line_horizontal_default" />
+    <View
+        style="@style/line_horizontal_default01"
+        android:layout_height="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="visible"
+        android:orientation="vertical"
+        >
+        <!-- 我的订单 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_mine_order"
+            >
+            <TextView
+                android:id="@+id/_text_mine_order"
+                style="@style/txt_grey_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/spacing_default"
+                android:drawableLeft="@drawable/mine_icon_order"
+                android:drawablePadding="@dimen/spacing_default"
+                android:gravity="left|center"
+                android:paddingRight="@dimen/spacing_middle"
+                android:paddingTop="@dimen/spacing_default"
+                android:paddingBottom="10dp"
+                android:textColor="#333333"
+                android:text="@string/text_mine_order"
+
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="查看全部订单"
+                android:id="@+id/tv_coupon"
+                android:layout_gravity="center"
+                android:textColor="#333333"
+                android:layout_marginRight="5dp"
+                android:gravity="right|center"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView27"
+                android:src="@drawable/register_bnt_advance"
+                android:layout_gravity="center"
+                android:layout_marginRight="14dp"
+                />
+        </LinearLayout>
+        <View style="@style/line_horizontal_default" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:paddingLeft="@dimen/spacing_default"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+            <!-- 待付款 -->
+            <TextView
+                android:id="@+id/text_mine_to_pay"
+                style="@style/txt_default"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="#333333"
+                android:drawablePadding="@dimen/spacing_small"
+                android:drawableTop="@drawable/test_icon_1"
+                android:gravity="center_horizontal"
+                android:text="@string/text_mine_to_pay" />
+
+            <!-- 待办理 -->
+            <TextView
+                android:id="@+id/text_mine_to_handle"
+                style="@style/txt_default"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="#333333"
+                android:drawablePadding="@dimen/spacing_small"
+                android:drawableTop="@drawable/test_icon_2"
+                android:gravity="center_horizontal"
+                android:text="@string/text_mine_to_handle" />
+
+            <!-- 已办理 -->
+            <TextView
+                android:id="@+id/text_mine_be_handled"
+                style="@style/txt_default"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="#333333"
+                android:drawablePadding="@dimen/spacing_small"
+                android:drawableTop="@drawable/test_icon_3"
+                android:gravity="center_horizontal"
+                android:text="@string/text_mine_be_handled" />
+
+            <!-- 待评价 -->
+            <TextView
+                android:id="@+id/text_mine_to_evaluated"
+                style="@style/txt_default"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="#333333"
+                android:drawablePadding="@dimen/spacing_small"
+                android:drawableTop="@drawable/mine_icon1_4"
+                android:gravity="center_horizontal"
+                android:text="@string/text_mine_to_evaluated" />
+
+            <!-- 退款 -->
+            <TextView
+                android:id="@+id/text_mine_refund"
+                style="@style/txt_default"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="#333333"
+                android:drawablePadding="@dimen/spacing_small"
+                android:drawableTop="@drawable/mine_icon1_5"
+                android:gravity="center_horizontal"
+                android:text="@string/text_mine_refund" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View style="@style/line_horizontal_default" />
+
+    <View
+        style="@style/line_horizontal_default01"
+        android:layout_height="10dp"/>
+
+    <View style="@style/line_horizontal_default" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+        <!-- 我的财产 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_mine_property"
+            >
+            <TextView
+                android:id="@+id/text_mine_property_"
+                style="@style/txt_grey_normal"
+                android:paddingLeft="@dimen/spacing_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:drawableLeft="@drawable/mine_icon_property"
+                android:drawablePadding="@dimen/spacing_default"
+                android:gravity="left|center_vertical"
+                android:paddingRight="@dimen/spacing_middle"
+                android:paddingTop="@dimen/spacing_default"
+                android:text="@string/text_mine_property"
+                android:paddingBottom="10dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="查看全部财产"
+                android:id="@+id/_text_mine_property"
+                android:layout_gravity="center"
+                android:textColor="#333333"
+                android:layout_marginRight="5dp"
+                android:gravity="right|center"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_mine_property_image"
+                android:src="@drawable/register_bnt_advance"
+                android:layout_gravity="center"
+                android:layout_marginRight="14dp"
+                />
+        </LinearLayout>
+
+
+        <!-- 圈子成员 -->
+
+        <View style="@style/line_horizontal_default" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/spacing_default"
+            android:orientation="horizontal" >
+            <!-- 预付款 -->
+            <TextView
+                android:id="@+id/text_mine_ready_pay"
+                style="@style/txt_default"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="#333333"
+                android:drawablePadding="@dimen/spacing_small"
+                android:drawableTop="@drawable/mine_icon2_1"
+                android:gravity="center_horizontal"
+                android:text="@string/text_mine_ready_pay" />
+
+            <!-- 代金券 -->
+            <TextView
+                android:id="@+id/text_mine_voucher"
+                style="@style/txt_default"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="#333333"
+                android:drawablePadding="@dimen/spacing_small"
+                android:drawableTop="@drawable/mine_icon2_2"
+                android:gravity="center_horizontal"
+                android:text="@string/text_mine_voucher" />
+
+            <!-- 红包 -->
+            <TextView
+                android:id="@+id/text_mine_red_envelope"
+                style="@style/txt_default"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="#333333"
+                android:drawablePadding="@dimen/spacing_small"
+                android:drawableTop="@drawable/mine_icon2_3"
+                android:gravity="center_horizontal"
+                android:text="@string/text_mine_red_envelope" />
+
+            <!-- 积分 -->
+            <TextView
+                android:id="@+id/text_mine_credit"
+                style="@style/txt_default"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="#333333"
+                android:drawablePadding="@dimen/spacing_small"
+                android:drawableTop="@drawable/mine_icon2_4"
+                android:gravity="center_horizontal"
+                android:text="@string/text_mine_credit" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal_default01"
+        android:layout_height="10dp" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:id="@+id/text_modity_psw"
+        android:paddingLeft="@dimen/spacing_default" >
+        <!-- 我的联系人 -->
+        <TextView
+            android:id="@+id/text_modity_psw_"
+            style="@style/txt_grey_normal"
+            android:layout_width="match_parent"
+            android:textColor="#333333"
+            android:layout_height="@dimen/spacing_action_bar"
+            android:drawableLeft="@drawable/mine_icon_contact"
+            android:drawablePadding="@dimen/spacing_default"
+            android:drawableRight="@drawable/register_bnt_advance"
+            android:gravity="left|center_vertical"
+            android:paddingRight="@dimen/spacing_middle"
+            android:paddingTop="@dimen/spacing_default"
+            android:text="@string/text_mine_contact"
+            android:paddingBottom="10dp"/>
+    </LinearLayout>
+    <View style="@style/line_horizontal_default" />
+    <View
+        style="@style/line_horizontal_default01"
+        android:layout_height="10dp" />
+    <!-- 用户设置 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:id="@+id/text_mine_settings"
+
+        android:paddingLeft="@dimen/spacing_default" >
+    <TextView
+        android:id="@+id/text_mine_settings_"
+        style="@style/txt_grey_normal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_action_bar"
+        android:drawableLeft="@drawable/mine_icon_settings"
+        android:drawablePadding="@dimen/spacing_default"
+        android:drawableRight="@drawable/register_bnt_advance"
+        android:gravity="left|center_vertical"
+        android:paddingRight="@dimen/spacing_middle"
+        android:paddingTop="@dimen/spacing_default"
+        android:text="@string/text_mine_settings"
+        android:textColor="#333333"
+        android:paddingBottom="10dp"/>
+    </LinearLayout>
+    <View style="@style/line_horizontal_default" />
+    <View
+        style="@style/line_horizontal_default01"
+        android:layout_height="10dp" />
+</LinearLayout>
+

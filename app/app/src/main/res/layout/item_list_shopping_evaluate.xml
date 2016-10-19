@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户：15527221401"
+                android:textSize="12sp"
+                android:textColor="#333333"
+                android:id="@+id/UserName"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016.07.06"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:id="@+id/UserAssessmentDate"
+                android:layout_alignBaseline="@+id/UserName"
+                android:layout_alignBottom="@+id/UserName"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="卖家服务还可以，就是效率不高，办了十几天才办下来，让人等的有点着急。"
+            android:textSize="15sp"
+            android:textColor="#666666"
+            android:id="@+id/UserViews"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:id="@+id/has_reply"
+        android:layout_height="wrap_content">
+        <View style="@style/line_horizontal_default"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商家：御用闲人大兵"
+                android:textSize="12sp"
+                android:textColor="#333333"
+                android:id="@+id/TraderName"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016.07.07"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:id="@+id/TraderAssessmentDate"
+                android:layout_alignBaseline="@+id/TraderName"
+                android:layout_alignBottom="@+id/TraderName"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="非常抱歉，给您带来的不便。"
+            android:textSize="15sp"
+            android:textColor="#666666"
+            android:id="@+id/TraderViews"/>
+    </LinearLayout>
+
+
+    <View style="@style/line_horizontal_default01"
+        android:layout_height="6dp"/>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--存放各种长度-->
+
+    <!-- ==========密码长度========== -->
+    <integer name="password_length">16</integer>
+
+    <!-- ==========手机号码长度========== -->
+    <integer name="phone_length">11</integer>
+
+    <!-- ==========手机验证码长度========== -->
+    <integer name="phone_code_length">6</integer>
+</resources>

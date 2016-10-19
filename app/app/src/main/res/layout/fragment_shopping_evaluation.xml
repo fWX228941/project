@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#efeff4"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/fragment_shopping_evalu_header"></include>
+
+    <!--   这些属性感觉没有用
+            progressActivity:emptyBackgroundColor="#fbc02d"
+            progressActivity:emptyContentTextColor="#FFFFFF"
+            progressActivity:emptyTitleTextColor="#FFFFFF"
+            progressActivity:errorBackgroundColor="#42a5f5"
+            progressActivity:errorButtonTextColor="#fbc02d"
+            progressActivity:errorContentTextColor="#fbc02d"
+            progressActivity:errorTitleTextColor="#FFFFFF"
+            progressActivity:loadingBackgroundColor="#FFFFFF"
+ xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
+
+    -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <com.android.haobanyi.view.ProgressActivity
+
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progressActivity"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <!-- app:layout_empty="@layout/view_empty ，把这个属性去掉"-->
+            <!--app:layout_moreProgress="@layout/view_more_progress" 关联hideMoreProgress-->
+            <com.malinskiy.superrecyclerview.SuperRecyclerView
+                android:id="@+id/superRecyclerView_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#efeff4"
+                app:recyclerClipToPadding="false"
+                android:scrollbars="none"
+                />
+        </com.android.haobanyi.view.ProgressActivity>
+    </LinearLayout>
+
+
+</LinearLayout>

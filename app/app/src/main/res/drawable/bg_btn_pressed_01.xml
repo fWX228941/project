@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--实心的：也就是设置默认长方形填充颜色 在颜色值的前面添加两位数就是55 就是透明度-->
+    <solid android:color="#006ee5"/>
+    <!--圆角大小：-->
+    <corners android:radius="5dp"/>
+
+</shape>

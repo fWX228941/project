@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <com.android.haobanyi.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/property_bg"
+        android:id="@+id/item"
+        android:orientation="horizontal">
+        <!--左边的图片全面缩放10dp 这个高宽比是需要自己来自定义一个，来匹配不同的屏幕-->
+        <!--SixteenToTenImageView-->
+
+
+            <TextView
+                android:id="@+id/list_item_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_marginTop="-5dp"
+                android:text="0"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/list_item_sales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="我的积分"
+                android:textColor="#ffffff"
+                android:layout_marginTop="35dp"
+                android:layout_below="@+id/list_item_point"
+                android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+    <com.android.haobanyi.view.ProgressActivity
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/progressActivity"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/item"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <com.malinskiy.superrecyclerview.SuperRecyclerView
+            android:id="@+id/superRecyclerView_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#efeff4"
+            app:recyclerClipToPadding="false"
+            android:scrollbars="none"
+            />
+    </com.android.haobanyi.view.ProgressActivity>
+
+</LinearLayout>

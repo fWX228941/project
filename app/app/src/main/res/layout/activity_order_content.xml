@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/id_l2_normal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <!--定制一个长度                android:maxWidth="200dp"-->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+   >
+    <ImageView
+        android:id="@+id/id_iv_logo"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:scaleType="centerCrop"
+        android:padding="10dp"
+        android:paddingLeft="12dp"
+        android:src="@mipmap/ic_launcher"
+        />
+    <LinearLayout
+        android:id="@+id/id_ll_normal"
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@id/id_iv_logo"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            >
+            <TextView
+                android:id="@+id/productname"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_width="wrap_content"
+                android:maxWidth="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="#666666"
+                android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                android:singleLine="true"
+                android:layout_toLeftOf="@+id/id_tv_discount_price"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+            <TextView
+                android:id="@+id/id_tv_discount_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"
+                android:text="￥1000000"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            >
+            <TextView
+                android:id="@+id/tv_items_child_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:textColor="#999999"
+                android:textSize="12dp"
+                android:text="服务：公司注册 商标注册"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/id_tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="21dp"
+                android:text="@string/product_count"
+                android:textColor="#666666"
+                android:textSize="12dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="21dp"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="评价"
+            android:id="@+id/evaluation"
+            android:background="@drawable/grey_textview_style"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_gravity="right"
+            android:textColor="@color/font_red"
+            android:textSize="14sp"
+            android:layout_marginRight="12dp"/>
+    </LinearLayout>
+</RelativeLayout>
+    <View style="@style/line_horizontal_default01" />
+
+    <include layout="@layout/activity_order_footer"></include>
+</LinearLayout>

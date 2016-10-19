@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#efeff4"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <com.android.haobanyi.view.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View style="@style/line_horizontal_default01"
+          android:layout_height="12dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:id="@+id/text_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="12dp" >
+            <!-- 我的联系人 -->
+            <TextView
+                android:id="@+id/_text_balance"
+                style="@style/txt_grey_normal_black"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_action_bar"
+                android:drawableLeft="@drawable/mine_icon2_1"
+                android:drawablePadding="@dimen/spacing_default"
+                android:drawableRight="@drawable/register_bnt_advance"
+                android:gravity="left|center_vertical"
+                android:paddingRight="12dp"
+                android:text="账户余额"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预存款账户余额，充值及提现明细"
+            android:id="@+id/text_balance_"
+            android:layout_marginLeft="12dp"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#666666"/>
+    </LinearLayout>
+    <View style="@style/line_horizontal_default"/>
+    <View style="@style/line_horizontal_default01"
+          android:layout_height="12dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:id="@+id/text_my_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="12dp" >
+            <!-- 我的联系人 -->
+            <TextView
+                android:id="@+id/_text_my_coupon"
+                style="@style/txt_grey_normal_black"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_action_bar"
+                android:drawableLeft="@drawable/mine_icon2_2"
+                android:drawablePadding="@dimen/spacing_default"
+                android:drawableRight="@drawable/register_bnt_advance"
+                android:gravity="left|center_vertical"
+                android:paddingRight="12dp"
+                android:text="我的代金券"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="店铺代金券使用情况以及卡密兑换代金券操作"
+            android:id="@+id/text_my_coupon_"
+            android:layout_marginLeft="12dp"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#666666"/>
+    </LinearLayout>
+    <View style="@style/line_horizontal_default"/>
+    <View style="@style/line_horizontal_default01"
+          android:layout_height="12dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/text_haobanyi_bonus"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="12dp" >
+            <!-- 我的联系人 -->
+            <TextView
+                android:id="@+id/_text_haobanyi_bonus"
+                style="@style/txt_grey_normal_black"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_action_bar"
+                android:drawableLeft="@drawable/mine_icon2_3"
+                android:drawablePadding="@dimen/spacing_default"
+                android:drawableRight="@drawable/register_bnt_advance"
+                android:gravity="left|center_vertical"
+                android:paddingRight="12dp"
+                android:text="平台红包"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="平台红包使用情况以及卡密领取红包操作"
+            android:id="@+id/text_haobanyi_bonus_"
+            android:layout_marginLeft="12dp"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#666666"/>
+    </LinearLayout>
+    <View style="@style/line_horizontal_default"/>
+    <View style="@style/line_horizontal_default01"
+          android:layout_height="12dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/text_modity_psw"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="12dp" >
+            <!-- 我的联系人 -->
+            <TextView
+                android:id="@+id/_text_mine_contact"
+                style="@style/txt_grey_normal_black"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_action_bar"
+                android:drawableLeft="@drawable/mine_icon2_4"
+                android:drawablePadding="@dimen/spacing_default"
+                android:drawableRight="@drawable/register_bnt_advance"
+                android:gravity="left|center_vertical"
+                android:paddingRight="12dp"
+                android:text="会员积分"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="会员积分获取及消费日志"
+            android:id="@+id/text_mine_contact_"
+            android:layout_marginLeft="12dp"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#666666"/>
+    </LinearLayout>
+    <View style="@style/line_horizontal_default"/>
+
+</LinearLayout>

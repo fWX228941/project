@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <!--出现一个奇葩问题：当我高度不固定时，用vivo 的手机测试就出现了一个显示问题55dp-->
+    <RadioGroup
+        android:id="@+id/group_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:checkedButton="@+id/radio_home_page"
+        android:orientation="horizontal" >
+        <!--首页-->
+        <RadioButton
+            android:id="@+id/radio_home_page"
+            style="@style/vertical_weight"
+            android:drawableTop="@drawable/home_icon_home_checked"
+            android:text="@string/home_page"/>
+
+        <!--购物车-->
+        <RadioButton
+            android:id="@+id/radio_shopping"
+            style="@style/vertical_weight"
+            android:drawableTop="@drawable/icon_shopping_checked"
+            android:text="@string/shopping"/>
+        <!--收藏-->
+        <RadioButton
+            android:id="@+id/radio_collection"
+            style="@style/vertical_weight"
+            android:drawableTop="@drawable/icon_collection_checked"
+            android:text="@string/collection"/>
+
+        <!--我的-->
+        <RadioButton
+            android:id="@+id/radio_mine"
+            style="@style/vertical_weight"
+            android:drawableTop="@drawable/icon_mine_checked"
+            android:text="@string/mine"/>
+    </RadioGroup>
+<!--linear_centent布局置放在group tab上 layout_above   android:layout_height="517dp"-->
+    <FrameLayout
+        style="@style/MatchMatch"
+        android:layout_above="@+id/group_tab">
+    <LinearLayout
+        android:id="@+id/linear_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/group_tab"
+        android:orientation="vertical" >
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/id_front_page_head"
+            android:visibility="visible">
+            <include layout="@layout/tab_front_page_index_1"/>
+            <!--                android:layout_height="129dp"  有扫一扫时-->
+            <LinearLayout
+                android:id="@+id/index_home_memus_content"
+                android:layout_width="120dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="wrap_content"
+                android:background="@color/background_black_pay"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_gravity="right">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textview_store"
+                    style="@style/txt_default_level_1"
+                    android:drawableLeft="@drawable/home_navibar_tips_icon_nearbyshop"
+                    android:text="商铺列表" />
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:id="@+id/textview_scan_code"
+                    style="@style/txt_default_level_1"
+                    android:drawableLeft="@drawable/home_navibar_tips_icon_scan"
+                    android:text="扫一扫" />
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textview_center"
+                    style="@style/txt_default_level_1"
+                    android:drawableLeft="@drawable/home_navibar_tips_icon_ordercenter"
+                    android:text="订单中心" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </FrameLayout>
+</RelativeLayout>

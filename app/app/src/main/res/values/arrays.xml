@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="category_list">
+        <item>综合</item>
+        <item>服务</item>
+        <item>店铺</item>
+        <item>销量</item>
+        <item>价格</item>
+    </array>
+    <string-array name="array_list_history">
+        <item>公司注册</item>
+        <item>资质办理</item>
+        <item>公司变更</item>
+        <item>代理记账</item>
+        <item>税务办理</item>
+        <item>财务审计</item>
+        <item>商标服务</item>
+        <item>版权服务</item>
+        <item>专利服务</item>
+        <item>律师服务</item>
+        <item>服务许可</item>
+        <item>外贸代理</item>
+        <item>投资移民</item>
+        <item>知识产权</item>
+    </string-array>
+    <string-array name="category_receipt_list">
+        <item>普通发票</item>
+        <item>增值税发票</item>
+    </string-array>
+
+    <array name="keyword_list_test">
+     <item>综合</item>
+     <item>综合</item>
+     <item>价格+</item>
+     <item>价格-</item>
+    </array>
+
+    <array name="category_shopping_list">
+        <item>服务</item>
+        <item>详情</item>
+        <item>评价</item>
+    </array>
+    <array name="category_shop_list">
+        <item>店铺首页</item>
+        <item>全部服务</item>
+        <item>店铺活动</item>
+        <item>店铺代金券</item>
+    </array>
+    <array name="keyword_list">
+        <item>综合</item>
+        <item>店铺</item>
+        <item>价格+</item>
+        <item>价格-</item>
+    </array>
+    <array name="category_order_list">
+        <item>全部</item>
+        <item>待付款</item>
+        <item>待办理</item>
+        <item>待确认</item>
+        <item>待评价</item>
+    </array>
+    <array name="category_my_refund_list">
+        <item>所有</item>
+        <item>待商家审核</item>
+        <item>已完成</item>
+    </array>
+
+    <array name="shopy_search_list">
+        <item>综合</item>
+        <item>销量</item>
+    </array>
+</resources>
